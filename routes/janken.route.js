@@ -1,0 +1,9 @@
+// routes/janken.route.js
+
+import express from 'express';
+import { getResult } from '../controllers/janken.controller.js';
+
+export const jankenRouter = express.Router();
+
+// postメソッド、送られてきたデータはreqの中
+jankenRouter.post('/', (req, res) => getResult(req, res));
